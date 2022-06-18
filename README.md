@@ -1,4 +1,4 @@
-# SuperHeroApi
+# GraphQL Row Level Security (Superhero Demo)
 
 Web API project with GraphQL / Entity Framework / SQL / .NET Identity Authorisation demonstrating row-level security of GraphQL queries based on Role.
 
