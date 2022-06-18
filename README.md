@@ -27,6 +27,9 @@ Hot Chocolate UI for Graph SQL
 3. Migrate and seed the database with `update-database`
 4. Run the web app
 5. Register a new account with any email address (no email confirmation required)
+
+![image](https://user-images.githubusercontent.com/80036622/174424113-7a8ff064-ca6c-44f4-a774-88776d83626f.png)
+
 6. You will be redirected to Hot Chocolate GraphQL UI
 7. Run the following query
 
