@@ -52,7 +52,7 @@ Only "Batman" will be returned because "Level3Admin" role is required to see Sup
 ## Level 3 Admin Access
 
 1. Open SQL Server Management Studio
-2. Add your user to the "Level3Admin" role in the `AspNetUserRoles` table. Role ID is: `4f9c41ec-780e-4a18-8de1-4f3d5b23ef31`
+2. Add your user to the "Level3Admin" role in the `AspNetUserRoles` table. Seeded "Level3Admin" Role ID is: `4f9c41ec-780e-4a18-8de1-4f3d5b23ef31`
 
 ![image](https://user-images.githubusercontent.com/80036622/174424140-9193fcf8-282e-4f97-94ca-14eb7cc7e8c5.png)
 
