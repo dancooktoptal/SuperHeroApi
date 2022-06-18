@@ -22,7 +22,7 @@ public class Query
         return context.Superheroes.Where(s =>
 
             // Row level security filtering based on role
-            (s.Height > 100 || isLevel3Admin)
+            (s.Height > 1.8 || isLevel3Admin)
 
         );
     }

@@ -142,7 +142,7 @@ namespace SuperHeroApi.Areas.Identity.Pages.Account
                     else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        return LocalRedirect("/graphql");
                     }
                 }
                 foreach (var error in result.Errors)
