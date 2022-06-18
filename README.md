@@ -107,3 +107,17 @@ public class Query
     }
 }
 ```
+
+# References
+
+Tutorial on GraphQL with Entity Framework
+https://christian-schou.dk/how-to-implement-graphql-in-asp-net-core/
+
+How to implement authorization using GraphQL.NET at Resolver function level?
+https://stackoverflow.com/questions/53537521/how-to-implement-authorization-using-graphql-net-at-resolver-function-level
+
+GraphQL: Simple authorization and authentication with HotChocolate 11 and ASP.NET Core 3
+https://medium.com/@marcinjaniak/graphql-simple-authorization-and-authentication-with-hotchocolate-11-and-asp-net-core-3-162e0a35743d
+
+graphql-dotnet Authorization - Getting Started
+https://graphql-dotnet.github.io/docs/getting-started/authorization/
