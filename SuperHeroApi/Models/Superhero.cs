@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using GraphQL;
 
 namespace SuperHeroApi.Models;
 
+[Authorize]
 public class Superhero
 {
     [Key]

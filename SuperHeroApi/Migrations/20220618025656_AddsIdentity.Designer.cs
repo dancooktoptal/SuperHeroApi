@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperHeroApi.Data;
 
@@ -11,9 +12,10 @@ using SuperHeroApi.Data;
 namespace SuperHeroApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220618025656_AddsIdentity")]
+    partial class AddsIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,15 +49,6 @@ namespace SuperHeroApi.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "4f9c41ec-780e-4a18-8de1-4f3d5b23ef31",
-                            ConcurrencyStamp = "48193b13-0d22-4a68-9266-bfd617637c6d",
-                            Name = "Level3Admin",
-                            NormalizedName = "LEVEL3ADMIN"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -111,12 +104,10 @@ namespace SuperHeroApi.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -153,12 +144,10 @@ namespace SuperHeroApi.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -201,65 +190,65 @@ namespace SuperHeroApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8ff65283-ecb5-42f6-a7bc-a50d0989f01a"),
+                            Id = new Guid("06939eb3-6804-4ee1-b7f5-1c325265ae6c"),
                             Description = "Batman Begins is a 2005 superhero film directed by Christopher Nolan and written by Nolan and David S. Goyer. Based on the DC Comics character Batman, it stars Christian Bale as Bruce Wayne / Batman, with Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman,",
                             Instructor = "Christopher Nolan",
                             ReleaseDate = new DateTime(2005, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SuperheroId = new Guid("92b16a8e-4552-4c1f-a704-0e3543dcf232"),
+                            SuperheroId = new Guid("1b734ada-29b9-41a2-9d99-3cafda36ab5a"),
                             Title = "Batman Begins"
                         },
                         new
                         {
-                            Id = new Guid("13c4bd01-e1fb-4d94-a6e6-64e6c903de86"),
+                            Id = new Guid("c8448fbb-df8c-4368-a8a7-8b1066e5f8e2"),
                             Description = "The Dark Knight is a 2008 superhero film directed, produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman.",
                             Instructor = "Christopher Nolan",
                             ReleaseDate = new DateTime(2008, 7, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SuperheroId = new Guid("92b16a8e-4552-4c1f-a704-0e3543dcf232"),
+                            SuperheroId = new Guid("1b734ada-29b9-41a2-9d99-3cafda36ab5a"),
                             Title = "The Dark Knight"
                         },
                         new
                         {
-                            Id = new Guid("2955abb3-1d8d-40e7-b646-9ab936c6f7b6"),
+                            Id = new Guid("ba7253e5-f6e5-4f45-a99e-621859dd5490"),
                             Description = "The Dark Knight Rises is a 2012 superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer.",
                             Instructor = "Christopher Nolan",
                             ReleaseDate = new DateTime(2012, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SuperheroId = new Guid("92b16a8e-4552-4c1f-a704-0e3543dcf232"),
+                            SuperheroId = new Guid("1b734ada-29b9-41a2-9d99-3cafda36ab5a"),
                             Title = "The Dark Knight Rises"
                         },
                         new
                         {
-                            Id = new Guid("f10f3f0f-486e-4454-b788-737b0063874d"),
+                            Id = new Guid("e00c816f-2dd8-4cfb-a06a-97a1e034e68c"),
                             Description = "Star Wars (retroactively titled Star Wars: Episode IV – A New Hope) is a 1977 American epic space opera film written and directed by George Lucas, produced by Lucasfilm and distributed by 20th Century Fox.",
                             Instructor = "George Lucas",
                             ReleaseDate = new DateTime(1977, 5, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SuperheroId = new Guid("a1c6e570-49c1-4c44-98c3-b5897f7ce650"),
+                            SuperheroId = new Guid("5287fb51-4232-472c-a24e-4ae93313bc91"),
                             Title = "Star Wars: Episode IV – A New Hope"
                         },
                         new
                         {
-                            Id = new Guid("8198a03a-58aa-4e20-b3d0-2273e4ae1fa2"),
+                            Id = new Guid("faf38c51-9ea6-44f1-aede-748cd3c4b123"),
                             Description = "The Empire Strikes Back (also known as Star Wars: Episode V – The Empire Strikes Back) is a 1980 American epic space opera film directed by Irvin Kershner and written by Leigh Brackett and Lawrence Kasdan, based on a story by George Lucas.",
                             Instructor = "Irvin Kershner",
                             ReleaseDate = new DateTime(1980, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SuperheroId = new Guid("a1c6e570-49c1-4c44-98c3-b5897f7ce650"),
+                            SuperheroId = new Guid("5287fb51-4232-472c-a24e-4ae93313bc91"),
                             Title = "Star Wars: Episode V – The Empire Strikes Back"
                         },
                         new
                         {
-                            Id = new Guid("b74077ad-35f0-4e4e-a59f-2145fd60ee12"),
+                            Id = new Guid("a4692f71-7c54-4133-90b2-481067b4866c"),
                             Description = "Return of the Jedi (also known as Star Wars: Episode VI – Return of the Jedi) is a 1983 American epic space opera film directed by Richard Marquand. The screenplay is by Lawrence Kasdan and George Lucas from a story by Lucas, who was also the executive producer.",
                             Instructor = "Richard Marquand",
                             ReleaseDate = new DateTime(1983, 5, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SuperheroId = new Guid("a1c6e570-49c1-4c44-98c3-b5897f7ce650"),
+                            SuperheroId = new Guid("5287fb51-4232-472c-a24e-4ae93313bc91"),
                             Title = "Star Wars: Episode VI – Return of the Jedi"
                         },
                         new
                         {
-                            Id = new Guid("f7b6da56-46a1-44b5-baf0-3ec0c569a2ce"),
+                            Id = new Guid("5ef2a518-d736-4a0c-a25e-a77a9d4fb3bd"),
                             Description = "Black Widow is a 2021 American superhero film based on Marvel Comics featuring the character of the same name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 24th film in the Marvel Cinematic Universe (MCU).",
                             Instructor = "Cate Shortland",
                             ReleaseDate = new DateTime(2021, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            SuperheroId = new Guid("a96e2cc5-603d-474a-a0ec-5fadb8eab5ec"),
+                            SuperheroId = new Guid("8b6d37a8-57f4-4b36-af15-33ce6d6b812f"),
                             Title = "Black Widow"
                         });
                 });
@@ -288,21 +277,21 @@ namespace SuperHeroApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("92b16a8e-4552-4c1f-a704-0e3543dcf232"),
+                            Id = new Guid("1b734ada-29b9-41a2-9d99-3cafda36ab5a"),
                             Description = "Batman was originally introduced as a ruthless vigilante who frequently killed or maimed criminals, but evolved into a character with a stringent moral code and strong sense of justice. Unlike most superheroes, Batman does not possess any superpowers, instead relying on his intellect, fighting skills, and wealth.",
                             Height = 1.9299999999999999,
                             Name = "Batman"
                         },
                         new
                         {
-                            Id = new Guid("a1c6e570-49c1-4c44-98c3-b5897f7ce650"),
+                            Id = new Guid("5287fb51-4232-472c-a24e-4ae93313bc91"),
                             Description = "Luke Skywalker was a Tatooine farmboy who rose from humble beginnings to become one of the greatest Jedi the galaxy has ever known. Along with his friends Princess Leia and Han Solo, Luke battled the evil Empire, discovered the truth of his parentage, and ended the tyranny of the Sith.",
                             Height = 1.7,
                             Name = "Luke Skywalker"
                         },
                         new
                         {
-                            Id = new Guid("a96e2cc5-603d-474a-a0ec-5fadb8eab5ec"),
+                            Id = new Guid("8b6d37a8-57f4-4b36-af15-33ce6d6b812f"),
                             Description = "Black Widow, real name Natasha Romanoff, is a trained female secret agent and superhero that appears in Marvel Comics. Associated with the superhero teams S.H.I.E.L.D. and the Avengers, Black Widow makes up for her lack of superpowers with world class training as an athlete, acrobat, and expert martial artist and weapon specialist.",
                             Height = 1.7,
                             Name = "Black Widow"
@@ -335,52 +324,52 @@ namespace SuperHeroApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a8bec55f-a142-429a-9901-79127b3a8696"),
+                            Id = new Guid("6a93b83c-96dc-40e1-b51a-1d0f625bad60"),
                             Description = "He's always a step ahead.",
                             SuperPower = "Intellect.",
-                            SuperheroId = new Guid("92b16a8e-4552-4c1f-a704-0e3543dcf232")
+                            SuperheroId = new Guid("1b734ada-29b9-41a2-9d99-3cafda36ab5a")
                         },
                         new
                         {
-                            Id = new Guid("c17046fd-417b-4e2b-bd08-970eb90b19b7"),
+                            Id = new Guid("56f77a4b-9b6a-47bb-8a14-f91d3b1347f7"),
                             Description = "Sublime fighting skills.",
                             SuperPower = "Fighting",
-                            SuperheroId = new Guid("92b16a8e-4552-4c1f-a704-0e3543dcf232")
+                            SuperheroId = new Guid("1b734ada-29b9-41a2-9d99-3cafda36ab5a")
                         },
                         new
                         {
-                            Id = new Guid("5bd036ce-6a9e-452e-bc29-601e563e24b5"),
+                            Id = new Guid("01bbb20d-03c7-420e-ae5d-23b4bd98f7f7"),
                             Description = "He got a lot of money",
                             SuperPower = "Wealth.",
-                            SuperheroId = new Guid("92b16a8e-4552-4c1f-a704-0e3543dcf232")
+                            SuperheroId = new Guid("1b734ada-29b9-41a2-9d99-3cafda36ab5a")
                         },
                         new
                         {
-                            Id = new Guid("2d6ff246-ba5b-42a9-bb4a-eb90323bbd65"),
+                            Id = new Guid("3b7c0c68-49c6-402d-895f-1c46968d580b"),
                             Description = "Skywalker is able to deflect fire from a blaster back at the opponent firing. This enables Luke to turn someone else's weapon against them.",
                             SuperPower = "Deflect blaster power.",
-                            SuperheroId = new Guid("a1c6e570-49c1-4c44-98c3-b5897f7ce650")
+                            SuperheroId = new Guid("5287fb51-4232-472c-a24e-4ae93313bc91")
                         },
                         new
                         {
-                            Id = new Guid("d31cd04d-e487-42d6-9f6e-c3c251263d60"),
+                            Id = new Guid("995674aa-bf97-405f-9f2f-77249c9c82a9"),
                             Description = "She's good at spying at people.",
                             SuperPower = "Espionage",
-                            SuperheroId = new Guid("a96e2cc5-603d-474a-a0ec-5fadb8eab5ec")
+                            SuperheroId = new Guid("8b6d37a8-57f4-4b36-af15-33ce6d6b812f")
                         },
                         new
                         {
-                            Id = new Guid("064bb0c0-5510-4f89-8fdc-de262a8fd24d"),
+                            Id = new Guid("7211c86f-83aa-4371-a468-486c967a994d"),
                             Description = "She knows how to infiltrate the enemy.",
                             SuperPower = "Infiltration",
-                            SuperheroId = new Guid("a96e2cc5-603d-474a-a0ec-5fadb8eab5ec")
+                            SuperheroId = new Guid("8b6d37a8-57f4-4b36-af15-33ce6d6b812f")
                         },
                         new
                         {
-                            Id = new Guid("35abcfc9-10dc-477a-8e47-2905eaf8a0c9"),
+                            Id = new Guid("f9ed4c35-e5cc-4160-a94c-dd6b00dea59b"),
                             Description = "The knowledge of how to undermine others.",
                             SuperPower = "Subterfuge",
-                            SuperheroId = new Guid("a96e2cc5-603d-474a-a0ec-5fadb8eab5ec")
+                            SuperheroId = new Guid("8b6d37a8-57f4-4b36-af15-33ce6d6b812f")
                         });
                 });
 
